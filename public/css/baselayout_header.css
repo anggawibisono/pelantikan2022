@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    background: #f0f1f8;
+    overflow-y: auto;
+    padding-bottom: 120px;
+}
+
+.header-page {
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-poltek {
+    margin-top: 40px;
+    width: 70px;
+}
+
+.judul1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    justify-content: center;
+    font-weight: thin;
+}
+.judul2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+}
+
+/* Navigasi Bttom */
+
+.bottom-nav {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.alert-konfirmasi {
+    position: absolute;
+    top: -10px;
+    right: 17px;
+    font-size: 18px;
+    color: red;
+}
+
+.hide-alert-konfirmasi {
+    display: none;
+}
+
+.navigation {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3%;
+    height: 80px;
+    /* background: #06208a; */
+    background: linear-gradient(
+        180deg,
+        rgba(6, 32, 138, 1) 50%,
+        rgba(5, 29, 126, 1) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .navigation {
+        margin-left: 35vw;
+        margin-right: 35vw;
+        margin-bottom: 8px;
+    }
+}
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 25%;
+    z-index: 1;
+}
+.navigation ul li.active a .text {
+    display: none;
+}
+.navigation ul li.active a .icon {
+    font-size: 30px;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    /* display: block; */
+    line-height: 5px;
+    font-size: 1.4em;
+    transition: 0.5s;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.navigation ul li a .text {
+    position: relative;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 0.6em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}

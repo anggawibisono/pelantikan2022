@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    background: #f0f1f8;
+    overflow-y: auto;
+    padding-bottom: 220px;
+}
+
+.opening {
+    border-radius: 20px;
+    margin-top: 30px;
+    background: #ffffff;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .opening {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+}
+.text-opening {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+}
+.text_nama_ortu {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .text-opening {
+        font-weight: 400;
+        font-size: 18px;
+        text-align: justify;
+    }
+    .text_nama_ortu {
+        font-weight: 600;
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+.content-undangan {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.hari-tanggal {
+    font-weight: 600;
+    color: #06208a;
+    margin-bottom: 10px;
+}
+
+.waktu {
+    font-weight: 600;
+    color: #06208a;
+    margin-bottom: 10px;
+}
+
+.lokasi {
+    font-weight: 600;
+    color: #06208a;
+}
+.alamat {
+    font-weight: 400;
+    color: #545151;
+    margin-bottom: 10px;
+}
+.pakaian {
+    font-weight: 600;
+    color: #06208a;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .hari-tanggal {
+        font-size: 22px;
+    }
+
+    .waktu {
+        font-size: 22px;
+    }
+
+    .lokasi {
+        font-size: 22px;
+    }
+    .alamat {
+        font-size: 22px;
+    }
+    .pakaian {
+        font-size: 22px;
+    }
+}
+
+.area-konfirmasi {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    background: #ffffff;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px;
+}
+
+.text-konfirmasi {
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .area-konfirmasi {
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+
+    .text-konfirmasi {
+        font-weight: 400;
+        font-size: 22px;
+    }
+}
+
+.button1 {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    /* background: #ffcb04; */
+    /* background: linear-gradient(
+        184deg,
+        rgba(255, 203, 4, 1) 50%,
+        rgba(255, 172, 4, 1) 100%
+    ); */
+    background: linear-gradient(184deg, green 50%, rgb(1, 107, 1) 100%);
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.button2 {
+    text-align: center;
+    border-radius: 20px;
+    border-color: red;
+    margin-top: 30px;
+    background: #ff000000;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: red;
+    font-weight: 600;
+    font-size: 15px;
+}

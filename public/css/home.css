@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    background: #f0f1f8;
+    overflow-y: auto;
+    padding-bottom: 120px;
+}
+
+.header {
+    margin-top: 10vh;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .header {
+        margin-top: 2%;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.logo-poltek {
+    width: 70px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .logo-poltek {
+        width: 140px;
+    }
+}
+
+.judul1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    justify-content: center;
+    font-weight: thin;
+}
+.judul2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 31px;
+    font-weight: 300;
+}
+.judul3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+}
+.judul4 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .judul1 {
+        font-size: 47px;
+    }
+    .judul2 {
+        font-size: 40px;
+        line-height: 25px;
+    }
+    .judul3 {
+        font-size: 31px;
+    }
+    .judul4 {
+        font-size: 36px;
+        line-height: 25px;
+    }
+}
+
+.opening {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    background: #ffffff;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .opening {
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 50px;
+        background: #ffffff;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.text-kepada {
+    color: #06208a;
+    font-weight: 400;
+}
+
+.area-kepada {
+    justify-content: center;
+    display: flex;
+}
+.text-bapak-ibu {
+    margin-right: 10px;
+    font-weight: 200;
+}
+.text-nama-ortu {
+    font-weight: 600;
+}
+
+.text-orangtuadari {
+    margin-top: 15px;
+    color: #06208a;
+    font-weight: 400;
+}
+.text-nama-taruna {
+    font-weight: 600;
+}
+.area-button-buka-undangan {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.area-image {
+    z-index: -1;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+}
+
+.image-bottom {
+    display: flex;
+}
+.image-left {
+    width: 50vw;
+}
+
+.image-right {
+    width: 50vw;
+}
+
+.image-safi {
+    height: 40vh;
+    width: auto;
+}
+.image-agung {
+    position: absolute;
+    right: 0px;
+    height: 40vh;
+    width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .image-safi {
+        height: 80vh;
+        margin-left: 10vw;
+    }
+    .image-agung {
+        height: 80vh;
+        right: 10vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .area-button-buka-undangan {
+        overflow: hidden;
+        position: fixed;
+        bottom: 10vh;
+        width: 100%;
+    }
+}
+.button-buka-undangan {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+
+.text-button-buka-undangan {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    background: #ffcb04;
+    margin-bottom: 25px;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffcb04;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
