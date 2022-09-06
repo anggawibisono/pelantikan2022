@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Taruna;
 use App\Http\Requests\AdminRequest;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\TarunaExport;
 
 class AdminController extends Controller
 {
@@ -13,9 +15,13 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tarunas=Taruna::all();
+        if($request->has('search')){
+            $tarunas=Taruna::where('nama_taruna','LIKE','%'.$request->search.'%')->orderBy('nama_taruna', 'asc')->get();
+        }else{
+            $tarunas=Taruna::orderBy('nama_taruna', 'asc')->get();
+        }
         return view('admin.admin',compact('tarunas'));
     }
 
@@ -103,5 +109,10 @@ class AdminController extends Controller
         $taruna=Taruna::find($id);
         $taruna->delete();
         return redirect('admin');
+    }
+
+
+    public function exportexcel(){
+        return Excel::download(new TarunaExport, 'Data Undangan Taruna Pelantikan 2022.xlsx');
     }
 }

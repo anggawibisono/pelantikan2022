@@ -13,10 +13,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/admin">Taruna</a>
+          <a class="nav-link" aria-current="page" href="/admin">Taruna</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/adminpejabat">Pejabat</a>
+          <a class="nav-link active" aria-current="page" href="/adminpejabat">Pejabat</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
@@ -37,40 +37,40 @@
         <!-- <div>
           Selamat Datang {{auth()->user()->name}}
         </div> -->
-        <a class="btn btn-primary mb-2 mt-4" href="{{url('admin/create')}}">Tambah Data Taruna</a>
-        <a class="btn btn-success mb-2 mt-4" href="/taruna/exportexcel">Export Data Excel</a>
+        <a class="btn btn-primary mb-2 mt-4" href="{{url('adminpejabat/create')}}">Tambah Data Pejabat</a>
+        <a class="btn btn-success mb-2 mt-4" href="/pejabat/exportexcel">Export Data Excel</a>
+
         <div class="row g-3 align-items-center mt-2">
           <div class="col-auto mb-4">
-            <form action="/admin" method="GET">
-              <input type="search" name="search" class="form-control" placeholder="Cari Nama Taruna">
+            <form action="/adminpejabat" method="GET">
+              <input type="search" name="search" class="form-control" placeholder="Cari Nama Pejabat">
             </form>
           </div>
 
         </div>
+
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                 <th scope="col">No</th>
-                <th scope="col">Nama Taruna</th>
+                <th scope="col">Nama Pejabat</th>
                 <th scope="col">URL Undangan</th>
-                <th scope="col">Nama Ayah</th>
-                <th scope="col">Nama Ibu</th>
+                <th scope="col">Jabatan</th>
                 <th scope="col">Konfirmasi Kehadiran</th>
                 <th scope="col" colspan="2">Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($tarunas as $key=>$value)
+                @foreach($pejabats as $key=>$value)
                     <tr>
                         <td>{{$key+1}}</td>
-                        <td>{{$value->nama_taruna}}</td>
-                        <td>pelantikan2022.poltekssn.ac.id/invitation/taruna/{{$value->slug}}</td>
-                        <td>{{$value->nama_ayah}}</td>
-                        <td>{{$value->nama_ibu}}</td>
+                        <td>{{$value->nama_pejabat}}</td>
+                        <td>pelantikan2022.poltekssn.ac.id/invitation/pejabat/{{$value->slug}}</td>
+                        <td>{{$value->jabatan}}</td>
                         <td>{{$value->konfirmasi_kehadiran}}</td>
-                        <td><a class="btn btn-success" href="{{url('admin/'.$value->id.'/edit')}}">Update</a></td>
+                        <td><a class="btn btn-success" href="{{url('adminpejabat/'.$value->id.'/edit')}}">Update</a></td>
                         <td>
-                            <form action="{{url('admin/'.$value->id)}}" method="POST">
+                            <form action="{{url('adminpejabat/'.$value->id)}}" method="POST">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button class="btn btn-danger" type="submit">Hapus</button></td>

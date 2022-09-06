@@ -33,7 +33,7 @@
             <div class="navigation">
                 <ul>
                     <li class="list">
-                        <a href="/invitation/taruna/{{$data_taruna->slug}}">
+                        <a href="/invitation/pejabat/{{$data_pejabat->slug}}">
                             <span class="icon">
                                 <i class="fa-solid fa-house"></i>
                             </span>
@@ -41,21 +41,21 @@
                         </a>
                     </li>
                     <li class="{{ Request::is('*undangan*') ? 'active' : ' ' }}">
-                        <a href="/invitation_isi/taruna/{{$data_taruna->slug}}">
+                        <a href="/invitation_isi/pejabat/{{$data_pejabat->slug}}">
 
                             <span class="icon">
                                 <i class="fa-solid fa-calendar"></i>
                             </span>
                             <span class="text">Undangan</span>
                             <div>
-                                <div class="{{ $data_taruna->konfirmasi_kehadiran=='no' ? 'alert-konfirmasi' : 'hide-alert-konfirmasi' }}">
+                                <div class="{{ $data_pejabat->konfirmasi_kehadiran=='no' ? 'alert-konfirmasi' : 'hide-alert-konfirmasi' }}">
                                     <i class="fa-solid fa-circle-exclamation"></i>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li class="{{ Request::is('*acara*') ? 'active' : ' ' }}">
-                        <a href="/invitation_acara/taruna/{{$data_taruna->slug}}">
+                        <a href="/invitation_acara/pejabat/{{$data_pejabat->slug}}">
                             <span class="icon">
                                 <i class="fa-solid fa-user-group"></i>
                             </span>
@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li class="{{ Request::is('*gallery*') ? 'active' : ' ' }}">
-                        <a href="/invitation_gallery/taruna/{{$data_taruna->slug}}">
+                        <a href="/invitation_gallery/pejabat/{{$data_pejabat->slug}}">
                             <span class="icon">
                                 <i class="fa-solid fa-image"></i>
                             </span>

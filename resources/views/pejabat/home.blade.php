@@ -26,14 +26,10 @@
                 Kepada
             </div>
             <div class="area-kepada">
-                <div class="text-bapak-ibu">Bapak/Ibu</div>
-                <div class="text-nama-ortu">{{$data_taruna->nama_ayah}}</div>
-            </div>
-             <div class="text-orangtuadari">
-                Orang Tua dari
+                <div class="text-nama-ortu">{{$data_pejabat->nama_pejabat}}</div>
             </div>
             <div class="area-orangtuadari">
-                <div class="text-nama-taruna">{{$data_taruna->nama_taruna}}</div>
+                <div class="text-bapak-ibu">{{$data_pejabat->jabatan}}</div>
             </div>
         </div>
 
@@ -52,7 +48,7 @@
 
         <div class="area-button-buka-undangan">
              <div class="button-buka-undangan">
-                <a class="text-button-buka-undangan" href="/invitation_isi/taruna/{{$data_taruna->slug}}">BUKA UNDANGAN</a>
+                <a class="text-button-buka-undangan" href="/invitation_isi/pejabat/{{$data_pejabat->slug}}">BUKA UNDANGAN</a>
             </div>
         </div>
         

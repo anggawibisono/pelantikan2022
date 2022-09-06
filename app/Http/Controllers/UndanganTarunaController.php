@@ -39,12 +39,7 @@ class UndanganTarunaController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($slug)
     {
         return view('taruna.undangan',['data_taruna'=>Taruna::where("slug",$slug)->first()]);

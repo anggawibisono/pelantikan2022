@@ -1,10 +1,10 @@
-@extends('layout.base_layout')
+@extends('layout.base_layout_pejabat')
 
 @section('content')
 <link rel="stylesheet" href="<?php echo asset('css/undangan.css')?>" type="text/css"> 
         <div class="opening">
             <div class="text-opening" >
-                Dengan hormat disampaikan bahwa Politeknik Siber dan Sandi Negara akan menyelenggarakan Pelantikan Taruna Politeknik Siber dan Sandi Negara Tahun 2022. Sehubungan dengan hal tersebut, dengan ini kami mengundang Bapak/Ibu <span class="text_nama_ortu">{{$data_taruna->nama_ayah}}</span> untuk hadir pada :
+                Dengan hormat disampaikan bahwa Politeknik Siber dan Sandi Negara akan menyelenggarakan Pelantikan Taruna Politeknik Siber dan Sandi Negara Tahun 2022. Sehubungan dengan hal tersebut, dengan ini kami mengundang Bapak/Ibu <span class="text_nama_ortu">{{$data_pejabat->nama_pejabat}}</span> untuk hadir pada :
             </div>
         </div>
 
@@ -28,9 +28,9 @@
             </div>
         </div>
         <div class="area-konfirmasi">
-            @if( $data_taruna->konfirmasi_kehadiran == 'yes' )
+            @if( $data_pejabat->konfirmasi_kehadiran == 'yes' )
             <div class="text-konfirmasi">Anda telah melakukan konfirmasi kehadiran</div>
-            <form method="POST" action="{{ url('/invitation/taruna/batal_konfirmasi/'.$data_taruna->id)}}">
+            <form method="POST" action="{{ url('/invitation/pejabat/batal_konfirmasi/'.$data_pejabat->id)}}">
                     @csrf
                     @method('PUT')
                 <button class="button2" type="submit">
@@ -39,7 +39,7 @@
             </form>
             @else
             <div class="text-konfirmasi">Harap melakukan konfirmasi kehadiran melalui tombol berikut</div>
-            <form method="POST" action="{{ url('taruna/undangan/'.$data_taruna->id)}}">
+            <form method="POST" action="{{ url('pejabat/undangan/'.$data_pejabat->id)}}">
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">
                 <button class="button1" type="submit">

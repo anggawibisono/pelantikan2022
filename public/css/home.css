@@ -141,39 +141,60 @@ body {
     overflow: hidden;
     position: fixed;
     bottom: 0px;
+    width: 100%;
 }
 
 .image-bottom {
+    width: 100%;
     display: flex;
 }
 .image-left {
-    width: 50vw;
+    width: 50%;
 }
 
 .image-right {
-    width: 50vw;
+    width: 50%;
 }
 
 .image-safi {
-    height: 40vh;
+    height: 400px;
     width: auto;
 }
 .image-agung {
     position: absolute;
-    right: 0px;
-    height: 40vh;
+    right: 0;
+    height: 400px;
     width: auto;
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
+
+    .area-image {
+        z-index: -1;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0px;
+    }
+
+    .image-bottom {
+        display: flex;
+    }
+    .image-left {
+        width: 50vw;
+    }
+
+    .image-right {
+        width: 50vw;
+    }
+
     .image-safi {
+        margin-left: 20vw;
         height: 80vh;
-        margin-left: 10vw;
     }
     .image-agung {
+        margin-right: 20vw;
         height: 80vh;
-        right: 10vw;
     }
 }
 
@@ -182,7 +203,7 @@ body {
     .area-button-buka-undangan {
         overflow: hidden;
         position: fixed;
-        bottom: 10vh;
+        bottom: 3vh;
         width: 100%;
     }
 }
